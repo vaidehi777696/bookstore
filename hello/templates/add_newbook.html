@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'add_newbook.css' %}"> 
+    <style>
+        body {
+          background-image: url('book.jpg');
+        }
+    </style>
+</head>
+<style>
+    body {
+      background-image: url('book.jpg');
+    }
+</style>
+    
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="form-inline" href="#">Signup</a>
+    </nav>
+<form method="POST">
+    {% csrf_token %}
+    <br>
+       <input type="text" name="bookname" id="bookname" placeholder="enter your bookname"><br><br>
+       <input type="text" name="authorname" id="authorname" placeholder="enter your authorname"><br><br>
+       
+    
+    
+    </br>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <input type="submit" name="submit" id="submit">  
+</form>
+</body>
+</html>
